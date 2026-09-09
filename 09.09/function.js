@@ -137,14 +137,13 @@ console.log(Array.isArray(autok));
   4. határozzuk meg az uj tomb legnagyobb értéku elemet
   
 */
-
+//1
 let tomb = [36, -2, 112, 101, 22];
-let max = 100;
-let min = -100;
 for (i = 0; i < 10; i++) {
-  tomb.push(Math.floor(Math.random() * (max - min) + min));
+  tomb.push(Math.floor(Math.random() * 200 - 100));
 }
 console.log(`random+tomb ${tomb}`);
+//2
 let ujtomb = [];
 tomb = tomb.filter((pozpar) => {
   if (pozpar > 0 && pozpar % 2 == 0) {
@@ -152,6 +151,7 @@ tomb = tomb.filter((pozpar) => {
   }
 });
 console.log(`ujtomb ${ujtomb}`);
+//3
 let igen = false;
 for (let j of ujtomb) {
   if (j > 100) {
@@ -159,9 +159,10 @@ for (let j of ujtomb) {
   }
 }
 console.log(`van e benne 100nal nagyobb ${igen}`);
+//4
 let legnagyobb = ujtomb[0];
 for (i = 0; i < ujtomb.length; i++) {
   if (legnagyobb < ujtomb[i]) legnagyobb = ujtomb[i];
 }
-
+console.log(Math.max(...ujtomb));
 console.log(`legnagyobb szam ${legnagyobb}`);
