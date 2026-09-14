@@ -65,11 +65,16 @@ const jellemzok = [
   "Kálmán Béla;188.1;79",
   "Rácz Teréz;174.18;62.5",
 ];
-
+// javitás kell :)
 for (let a of jellemzok) {
-  let b = a.split(";");
-
-  console.log(
-    `Név: ${b[0]}, Magasság: ${b[1].padEnd(6, "0")}, Súly ${b[2]} kg`,
-  );
+  const b = a.split(";");
+  if (!b[2].includes(".")) {
+    console.log(
+      `Név: ${b[0]}, Magasság: ${(b[1] + ".").padEnd(6, "0")} cm, Súly ${b[2].padEnd(5, 0)} kg`,
+    );
+  } else {
+    console.log(
+      `Név: ${b[0]}, Magasság: ${b[1].padEnd(6, "0")} cm, Súly ${b[2].padEnd(5, 0)} kg`,
+    );
+  }
 }
