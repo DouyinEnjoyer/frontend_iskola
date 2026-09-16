@@ -41,3 +41,34 @@ eljaras("red-value", "input", rangeRGBAOnEnter);
 $("green-value").addEventListener("input", rangeRGBAOnEnter);
 $("blue-value").addEventListener("input", rangeRGBAOnEnter);
 $("alpha-value").addEventListener("input", rangeRGBAOnEnter);
+
+function changeWidth() {
+  const width = $("width-range").value;
+  $("rgb-box").style.width = width + "px";
+}
+
+$("width-range").addEventListener("input", changeWidth);
+
+function changeHeight() {
+  const height = $("height-range").value;
+  $("rgb-box").style.height = height + "px";
+}
+$("height-range").addEventListener("input", changeHeight);
+
+function changeBorderRadius() {
+  const border = $("border-range").value;
+  $("rgb-box").style.borderRadius = border + "px";
+}
+$("border-range").addEventListener("input", changeBorderRadius);
+
+function changeMT() {
+  const marginTop = $("mt-range").value;
+  $("rgb-box").style.marginTop = marginTop + "px";
+}
+$("mt-range").addEventListener("input", changeMT);
+
+function changeML() {
+  const marginLeft = $("ml-range").value;
+  $("rgb-box").style.marginLeft = marginLeft + "px";
+}
+$("ml-range").addEventListener("input", changeML);
